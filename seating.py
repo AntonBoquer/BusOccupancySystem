@@ -66,17 +66,17 @@ seat_midpoints = {seat: (box["x"], box["y"]) for seat, box in seat_boxes.items()
 # ✅ Step 4: Function to Read Detection Results
 def read_detection_results():
     try:
-        with open("detection_results6.json", "r") as file:
+        json_path = os.path.join("json_data", "detection_results6.json")
+        with open(json_path, "r") as file:
             seat_data = json.load(file)
             print(f"Loaded Detection Data: {json.dumps(seat_data, indent=2)}")  # Debug log
             return seat_data    
     except FileNotFoundError:
-        print("Error: detection_results6.json not found.")
+        print(f"Error: {json_path} not found.")
         return []
     except json.JSONDecodeError:
-        print("Error: Invalid JSON format in detection_results6.json!")
+        print(f"Error: Invalid JSON format in {json_path}!")
         return []
-
 
 
 # previous_seat_status = {} 

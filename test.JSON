@@ -1,0 +1,55 @@
+{
+    "oneone": 1,
+    "onetwo": 0,
+    "onethree": 1,
+    "onefour": 0,
+    
+    "twoone": 0,
+    "twotwo": 1,
+    "twothree": 1,
+    "twofour": 0,
+
+    "threeone": 0,
+    "threetwo": 0,
+    "threethree": 1,
+    "threefour": 0,
+    
+    "fourone": 1,
+    "fourtwo": 1,
+    "fourthree": 1,
+    "fourfour": 0,
+    
+    "fiveone": 1,
+    "fivetwo": 0,
+    "fivethree": 0,
+    "fivefour": 0,
+    
+    "sixone": 1,
+    "sixtwo": 1,
+    "sixthree": 1,
+    "sixfour": 1,
+    
+    "sevenone": 0,
+    "seventwo": 0,
+    "seventhree": 1,
+    "sevenfour": 0,
+    
+    "eightone": 1,
+    "eighttwo": 0,
+    "eightthree": 1,
+    "eightfour": 1,
+
+    "nineone": 0,
+    "ninetwo": 0,
+
+    "tenone": 0,
+    "tentwo": 0,
+    "tenthree": 0,
+    "tenfour": 0,
+    "tenfive": 1
+
+
+    
+
+}
+  

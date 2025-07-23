@@ -1,0 +1,392 @@
+[
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 1,
+    "class_name": "Unoccupied",
+    "confidence": 0.956,
+    "x_min": 558.13,
+    "y_min": 589.18,
+    "x_max": 1167.16,
+    "y_max": 1439.59
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 1,
+    "class_name": "Unoccupied",
+    "confidence": 0.9373,
+    "x_min": 142.41,
+    "y_min": 727.41,
+    "x_max": 567.62,
+    "y_max": 1435.75
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 1,
+    "class_name": "Occupied",
+    "confidence": 0.9034,
+    "x_min": 635.99,
+    "y_min": 283.1,
+    "x_max": 763.02,
+    "y_max": 435.23
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 1,
+    "class_name": "Occupied",
+    "confidence": 0.8429,
+    "x_min": 1076.75,
+    "y_min": 113.81,
+    "x_max": 1168.68,
+    "y_max": 219.31
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 0,
+    "class_name": "Occupied",
+    "confidence": 0.8346,
+    "x_min": 724.87,
+    "y_min": 218.36,
+    "x_max": 828.49,
+    "y_max": 326.1
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 0,
+    "class_name": "Occupied",
+    "confidence": 0.8345,
+    "x_min": 1524.12,
+    "y_min": 74.28,
+    "x_max": 1597.12,
+    "y_max": 137.93
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 0,
+    "class_name": "Occupied",
+    "confidence": 0.831,
+    "x_min": 820.15,
+    "y_min": 134.48,
+    "x_max": 917.42,
+    "y_max": 236.62
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 0,
+    "class_name": "Occupied",
+    "confidence": 0.8305,
+    "x_min": 1644.11,
+    "y_min": 126.54,
+    "x_max": 1738.82,
+    "y_max": 214.41
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 1,
+    "class_name": "Occupied",
+    "confidence": 0.8264,
+    "x_min": 1529.34,
+    "y_min": 317.29,
+    "x_max": 1762.99,
+    "y_max": 448.58
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 1,
+    "class_name": "Occupied",
+    "confidence": 0.8187,
+    "x_min": 1423.17,
+    "y_min": 168.35,
+    "x_max": 1583.5,
+    "y_max": 229.04
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 0,
+    "class_name": "Occupied",
+    "confidence": 0.8083,
+    "x_min": 1796.25,
+    "y_min": 215.91,
+    "x_max": 1915.72,
+    "y_max": 352.05
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 0,
+    "class_name": "Occupied",
+    "confidence": 0.7896,
+    "x_min": 394.5,
+    "y_min": 416.13,
+    "x_max": 565.78,
+    "y_max": 632.79
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 1,
+    "class_name": "Occupied",
+    "confidence": 0.7729,
+    "x_min": 1459.99,
+    "y_min": 218.61,
+    "x_max": 1649.95,
+    "y_max": 318.63
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 0,
+    "class_name": "Occupied",
+    "confidence": 0.7716,
+    "x_min": 2006.33,
+    "y_min": 607.45,
+    "x_max": 2310.61,
+    "y_max": 1088.92
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 0,
+    "class_name": "Occupied",
+    "confidence": 0.7637,
+    "x_min": 1032.54,
+    "y_min": 73.65,
+    "x_max": 1095.18,
+    "y_max": 135.64
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 1,
+    "class_name": "Occupied",
+    "confidence": 0.758,
+    "x_min": 876.42,
+    "y_min": 261.61,
+    "x_max": 1094.88,
+    "y_max": 362.79
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 0,
+    "class_name": "Occupied",
+    "confidence": 0.7319,
+    "x_min": 1708.85,
+    "y_min": 191.85,
+    "x_max": 1795.01,
+    "y_max": 273.9
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 0,
+    "class_name": "Occupied",
+    "confidence": 0.7311,
+    "x_min": 937.11,
+    "y_min": 105.87,
+    "x_max": 997.28,
+    "y_max": 150.45
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 0,
+    "class_name": "Occupied",
+    "confidence": 0.7294,
+    "x_min": 845.59,
+    "y_min": 394.15,
+    "x_max": 1022.0,
+    "y_max": 601.22
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 0,
+    "class_name": "Occupied",
+    "confidence": 0.7286,
+    "x_min": 1775.8,
+    "y_min": 348.63,
+    "x_max": 1932.48,
+    "y_max": 510.33
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 1,
+    "class_name": "Occupied",
+    "confidence": 0.7081,
+    "x_min": 936.72,
+    "y_min": 192.7,
+    "x_max": 1103.38,
+    "y_max": 260.72
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 1,
+    "class_name": "Unoccupied",
+    "confidence": 0.6914,
+    "x_min": 1442.0,
+    "y_min": 25.96,
+    "x_max": 1529.41,
+    "y_max": 70.66
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 1,
+    "class_name": "Unoccupied",
+    "confidence": 0.6902,
+    "x_min": 1405.34,
+    "y_min": 122.43,
+    "x_max": 1523.66,
+    "y_max": 172.39
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 0,
+    "class_name": "Occupied",
+    "confidence": 0.6808,
+    "x_min": 1583.83,
+    "y_min": 587.01,
+    "x_max": 2042.33,
+    "y_max": 1167.48
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 1,
+    "class_name": "Unoccupied",
+    "confidence": 0.6714,
+    "x_min": 1334.25,
+    "y_min": 24.98,
+    "x_max": 1432.28,
+    "y_max": 62.07
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 1,
+    "class_name": "Unoccupied",
+    "confidence": 0.6711,
+    "x_min": 995.63,
+    "y_min": 32.76,
+    "x_max": 1084.89,
+    "y_max": 70.8
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 1,
+    "class_name": "Unoccupied",
+    "confidence": 0.6555,
+    "x_min": 1095.07,
+    "y_min": 42.0,
+    "x_max": 1191.84,
+    "y_max": 80.84
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 1,
+    "class_name": "Unoccupied",
+    "confidence": 0.6313,
+    "x_min": 971.67,
+    "y_min": 75.1,
+    "x_max": 1025.93,
+    "y_max": 104.26
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 0,
+    "class_name": "Occupied",
+    "confidence": 0.596,
+    "x_min": 917.76,
+    "y_min": 145.65,
+    "x_max": 970.68,
+    "y_max": 178.9
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 1,
+    "class_name": "Unoccupied",
+    "confidence": 0.5775,
+    "x_min": 1237.03,
+    "y_min": 2.25,
+    "x_max": 1323.41,
+    "y_max": 118.21
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 0,
+    "class_name": "Occupied",
+    "confidence": 0.5344,
+    "x_min": 1358.2,
+    "y_min": 86.45,
+    "x_max": 1421.35,
+    "y_max": 166.5
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 1,
+    "class_name": "Unoccupied",
+    "confidence": 0.4888,
+    "x_min": 1135.24,
+    "y_min": 0.97,
+    "x_max": 1229.17,
+    "y_max": 39.49
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 1,
+    "class_name": "Unoccupied",
+    "confidence": 0.478,
+    "x_min": 1337.48,
+    "y_min": 58.89,
+    "x_max": 1438.93,
+    "y_max": 87.72
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 1,
+    "class_name": "Unoccupied",
+    "confidence": 0.4475,
+    "x_min": 1095.22,
+    "y_min": 90.8,
+    "x_max": 1184.34,
+    "y_max": 116.13
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 1,
+    "class_name": "Unoccupied",
+    "confidence": 0.2755,
+    "x_min": 1640.31,
+    "y_min": 109.22,
+    "x_max": 1735.42,
+    "y_max": 143.47
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 1,
+    "class_name": "Occupied",
+    "confidence": 0.2715,
+    "x_min": 1426.79,
+    "y_min": 0.0,
+    "x_max": 1514.4,
+    "y_max": 31.85
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 0,
+    "class_name": "Unoccupied",
+    "confidence": 0.2713,
+    "x_min": 1053.68,
+    "y_min": 1.27,
+    "x_max": 1110.01,
+    "y_max": 38.86
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 1,
+    "class_name": "Occupied",
+    "confidence": 0.2374,
+    "x_min": 1322.63,
+    "y_min": 0.0,
+    "x_max": 1412.35,
+    "y_max": 30.82
+  },
+  {
+    "image": "C:\\Users\\rober\\Desktop\\acads\\DLSU\\10th Term\\THESIS\\runs\\detect\\predict21\\20240131113009042_9c47c313fd1847c1932933172067d406_AA0986735_jpg.rf.82b28eec1dbfc55be59cf93c8febb3d2.jpg",
+    "class_id": 1,
+    "class_name": "Unoccupied",
+    "confidence": 0.2261,
+    "x_min": 1534.52,
+    "y_min": 131.76,
+    "x_max": 1632.21,
+    "y_max": 169.86
+  }
+]

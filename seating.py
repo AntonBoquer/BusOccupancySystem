@@ -1,19 +1,6 @@
 import json
 import numpy as np
-import time
-from dotenv import load_dotenv
-import os
-from supabase import create_client, Client
-from watchdog.observers import Observer
-from watchdog.events import FileSystemEventHandler
 
-load_dotenv()
-
-
-SUPABASE_URL = os.getenv("SUPABASE_URL")
-SUPABASE_KEY = os.getenv("SUPABASE_KEY")
-
-supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 # Load predefined seat bounding boxes from your data
 seat_boxes = {
@@ -58,135 +45,88 @@ seat_boxes = {
     "tenfive": {"x": 1458.51, "y": 14.10, "width": 79.65, "height": 28.21}
 }
 # Compute seat midpoints
-# seat_midpoints = {seat: (box["x"] + box["width"] / 2, box["y"] + box["height"] / 2) for seat, box in seat_boxes.items()}
-seat_midpoints = {seat: (box["x"], box["y"]) for seat, box in seat_boxes.items()}
+seat_midpoints = {seat: (box["x"] + box["width"] / 2, box["y"] + box["height"] / 2) for seat, box in seat_boxes.items()}
 
+# Load detection results
+try:
+    with open("detection_results.json", "r") as file:
+        detections = json.load(file)
+except FileNotFoundError:
+    print("Error: detection_results.json not found.")
+    detections = []
 
+# Step 1: Iterate through all detections and process only occupied seats (class_id == 0)
+occupied_seats = {}
 
-# ✅ Step 4: Function to Read Detection Results
-def read_detection_results():
-    try:
-        json_path = os.path.join("json_data", "detection_results6.json")
-        with open(json_path, "r") as file:
-            seat_data = json.load(file)
-            print(f"Loaded Detection Data: {json.dumps(seat_data, indent=2)}")  # Debug log
-            return seat_data    
-    except FileNotFoundError:
-        print(f"Error: {json_path} not found.")
-        return []
-    except json.JSONDecodeError:
-        print(f"Error: Invalid JSON format in {json_path}!")
-        return []
+for detection in detections:
+    if detection["class_id"] != 0:
+        continue  # Skip unoccupied seats
 
+    x_min, y_min = detection["x_min"], detection["y_min"]
+    x_max, y_max = detection["x_max"], detection["y_max"]
 
-# previous_seat_status = {} 
-# ✅ Step 5: Function to Process and Update Seats
-# previous_seat_status = {} 
+    # Compute the center of the detected bounding box
+    x_center = (x_min + x_max) / 2
+    y_center = (y_min + y_max) / 2
 
-# Step 1: Iterate through detections and process only occupied seats
-# ✅ Function to Process and Update Seats in Supabase
-def process_and_update_seats():
-    detections = read_detection_results()  
+    # Step 1: Check if the detection is inside a seat bounding box
+    assigned_seat = None
+    for seat, box in seat_boxes.items():
+        x1, y1 = box["x"], box["y"]
+        x2, y2 = x1 + box["width"], y1 + box["height"]
 
+        if x1 <= x_center <= x2 and y1 <= y_center <= y2:
+            assigned_seat = seat
+            print(f"✅ Occupied Detection at ({x_center}, {y_center}) is INSIDE seat {assigned_seat}")
+            break  # Stop checking once a match is found
 
-    occupied_seats = {}  # Store detected occupied seats
-
-
-    for detection in detections:
-        if detection["class_id"] != 0:  # 0 means occupied
-            continue  # Skip unoccupied seats
-
-        x_center = (detection["x_min"] + detection["x_max"]) / 2
-        y_center = (detection["y_min"] + detection["y_max"]) / 2
-
-        assigned_seat = None
-        min_distance = float("inf")  # Initialize with a large number
-
-        for seat, box in seat_boxes.items():
-            # x1, y1 = box["x"], box["y"]
-            # x2, y2 = x1 + box["width"], y1 + box["height"]
-            x1, y1 = box["x"] - box["width"]/2, box["y"] - box["height"]/2
-            x2, y2 = box["x"] + box["width"]/2, box["y"] + box["height"]/2
-
-            if x1 <= x_center <= x2 and y1 <= y_center <= y2:
-                if seat not in occupied_seats:  # ✅ Prevent duplicate assignments
-                    occupied_seats[seat] = 0
-                    print(f"🪑 Assigned Seat: {seat}")  # Debug print
-                break  # ✅ Stop checking after the first valid match
-
-            # If not inside, assign the closest seat
-            seat_mid_x, seat_mid_y = seat_midpoints[seat]
-            distance = ((x_center - seat_mid_x) ** 2 + (y_center - seat_mid_y) ** 2) ** 0.5
-
-            if distance < min_distance:
-                min_distance = distance
-                assigned_seat = seat  # ✅ Assign closest seat
-
-        if assigned_seat:
-            occupied_seats[assigned_seat] = 0  # Mark as occupied
-            print(f"🪑 Assigned Seat: {assigned_seat}") 
-        else:
-            print(f"⚠️ No seat found for detection at ({x_center}, {y_center})")
-
-
-
-    # ✅ Step 2: Get all seat statuses from Supabase
-    response = supabase.table("seats").select("seat_number", "status").execute()
-    all_seats = {seat["seat_number"]: seat["status"] for seat in response.data}  # Get existing status
-
-    # ✅ Step 3: Update seat statuses
-    seat_status = {seat: occupied_seats.get(seat, 1) for seat in seat_boxes}  # Default to unoccupied
-
-    print(f"📌 Updated Seat Status Before DB Update: {seat_status}")  # Debug print
-
-    # ✅ Step 4: Update Supabase
-    for seat, status in seat_status.items():
-        response = (
-            supabase.table("seats")
-            .update({"status": bool(status == 1)})  # Convert 0 (occupied) to False
-            .eq("seat_number", seat) 
-            .execute()
+    # Step 2: If not inside any seat, assign to the closest available seat by midpoint
+    if not assigned_seat or assigned_seat in occupied_seats:
+        sorted_seats = sorted(
+            seat_midpoints.keys(),
+            key=lambda s: np.linalg.norm(np.array(seat_midpoints[s]) - np.array([x_center, y_center]))
         )
-        print(f"✅ Updated seat {seat}: {response}")  # Debug print
+
+        for seat in sorted_seats:
+            if seat not in occupied_seats:  # Find the first available seat
+                assigned_seat = seat
+                print(f"⚠️ Occupied Detection at ({x_center}, {y_center}) is OUTSIDE. Assigning closest available seat: {assigned_seat}")
+                break
+
+    # Assign occupied seat
+    occupied_seats[assigned_seat] = 0  # Mark as occupied
+
+# Step 2: Mark unoccupied seats
+seat_status = {seat: occupied_seats.get(seat, 1) for seat in seat_boxes}
+
+# Save results
+with open('seat_positions.json', 'w') as outfile:
+   from supabase import create_client, Client
+
+# Supabase credentials
+SUPABASE_URL = "https://yhsoxuyjrdchmbrlwqci.supabase.co"
+SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inloc294dXlqcmRjaG1icmx3cWNpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDEwNzE0MjksImV4cCI6MjA1NjY0NzQyOX0.pSsbZwAG8HNOQ-WPuKaRunoTn-Bal4uqDMlnhupe0DY"
+
+supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+
+# Step 1: Iterate over seat data and update Supabase
+for seat, status in seat_status.items():
+    seat_data = {
+        "seat_number": seat,
+        "x": seat_boxes[seat]["x"],
+        "y": seat_boxes[seat]["y"],
+        "width": seat_boxes[seat]["width"],
+        "height": seat_boxes[seat]["height"],
+        "status": bool(status == 0)  # Convert 0 (occupied) to True, 1 (empty) to False
+    }
+
+    # Insert or update seat status in Supabase
+    response = supabase.table("seats").upsert([seat_data]).execute()
+    print(f"Updated seat {seat}: {response}")
+
+print("\n✅ Seat occupancy data updated in Supabase.")
 
 
-
-# ✅ Step 6: Run the update function in a loop every 5 seconds
-# previous_seat_status = {}  # Store the last known seat statuses to avoid unnecessary updates
-
-# File system event handler
-class DetectionResultsHandler(FileSystemEventHandler):
-    def on_modified(self, event):
-        """Triggered when the file is modified."""
-        if event.src_path.endswith("detection_results6.json"):
-            print("🔄 Changes detected in detection_results6.json. Processing updates...")
-            process_and_update_seats()
-
-# Set up the file system observer
-def start_file_monitoring():
-    event_handler = DetectionResultsHandler()
-    observer = Observer()
-    observer.schedule(event_handler, path=".", recursive=False)  # Monitor the current directory
-    observer.start()
-    print("🔍 Monitoring detection_results6.json for changes...")
-
-    try:
-        while True:
-            time.sleep(1)  # Keep the script running
-    except KeyboardInterrupt:
-        observer.stop()
-    observer.join()
-
-# Start monitoring for changes
-start_file_monitoring()
-
-
-
-
-# # Print final seat occupancy
-# print("\n🪑 Final Seat Status:")
-# print(json.dumps(seat_status, indent=4))    
-# print(f"📄 Loaded Detection Data: {json.dumps(seat_data, indent=2)}")  # Debug log
-
-# print(f"📌 Final Detected Occupied Seats: {occupied_seats}")  # Should NOT be empty
-# print(f"📌 Updated Seat Status Before DB Update: {seat_status}")  # Should have True/False values
+# Print final seat occupancy
+print("\n🪑 Final Seat Status:")
+print(json.dumps(seat_status, indent=4))

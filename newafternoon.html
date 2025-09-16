@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Afternoon Bus Seat Availability</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Page-specific styles -->
+    <style>
+      body {
+        background-color: white;
+        text-align: center;
+      }
+
+      .image-container {
+        position: relative;
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      h1,
+      h2 {
+        font-family: "Karla", sans-serif;
+        color: var(--headerColor);
+      }
+
+      /* Seat positioning styles */
+      .custom-image11 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: -105px;
+        margin-left: -300px;
+      }
+      .custom-image12 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: -47px;
+        margin-left: -300px;
+      }
+      .custom-image13 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: 85px;
+        margin-left: -300px;
+      }
+      .custom-image14 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: 143px;
+        margin-left: -300px;
+      }
+
+      .custom-image21 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: -105px;
+        margin-left: -195px;
+      }
+      .custom-image22 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: -47px;
+        margin-left: -195px;
+      }
+      .custom-image23 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: 85px;
+        margin-left: -195px;
+      }
+      .custom-image24 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: 143px;
+        margin-left: -195px;
+      }
+
+      .custom-image31 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: -105px;
+        margin-left: -100px;
+      }
+      .custom-image32 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: -47px;
+        margin-left: -100px;
+      }
+      .custom-image33 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: 85px;
+        margin-left: -100px;
+      }
+      .custom-image34 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: 143px;
+        margin-left: -100px;
+      }
+
+      .custom-image41 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: -105px;
+        margin-left: -15px;
+      }
+      .custom-image42 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: -47px;
+        margin-left: -15px;
+      }
+      .custom-image43 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: 85px;
+        margin-left: -15px;
+      }
+      .custom-image44 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: 143px;
+        margin-left: -15px;
+      }
+
+      .custom-image51 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: -105px;
+        margin-left: 70px;
+      }
+      .custom-image52 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: -47px;
+        margin-left: 70px;
+      }
+      .custom-image53 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: 85px;
+        margin-left: 70px;
+      }
+      .custom-image54 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: 143px;
+        margin-left: 70px;
+      }
+
+      .custom-image61 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: -105px;
+        margin-left: 155px;
+      }
+      .custom-image62 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: -47px;
+        margin-left: 155px;
+      }
+      .custom-image63 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: 85px;
+        margin-left: 155px;
+      }
+      .custom-image64 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: 143px;
+        margin-left: 155px;
+      }
+
+      .custom-image71 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: -105px;
+        margin-left: 240px;
+      }
+      .custom-image72 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: -47px;
+        margin-left: 240px;
+      }
+      .custom-image73 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: 85px;
+        margin-left: 240px;
+      }
+      .custom-image74 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: 143px;
+        margin-left: 240px;
+      }
+
+      .custom-image81 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: -105px;
+        margin-left: 325px;
+      }
+      .custom-image82 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: -47px;
+        margin-left: 325px;
+      }
+      .custom-image83 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: 85px;
+        margin-left: 325px;
+      }
+      .custom-image84 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: 143px;
+        margin-left: 325px;
+      }
+
+      .custom-image91 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: -105px;
+        margin-left: 410px;
+      }
+      .custom-image92 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: -47px;
+        margin-left: 410px;
+      }
+
+      .custom-image101 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: -105px;
+        margin-left: 620px;
+      }
+      .custom-image102 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: -47px;
+        margin-left: 620px;
+      }
+      .custom-image103 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: 85px;
+        margin-left: 620px;
+      }
+      .custom-image104 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: 143px;
+        margin-left: 620px;
+      }
+      .custom-image105 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        margin-top: 20.5px;
+        margin-left: 620px;
+      }
+
+      #output {
+        font-family: "Poppins", monospace;
+        background-color: #f4f4f4;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 20px auto;
+        max-width: 800px;
+        text-align: left;
+        white-space: pre-wrap;
+      }
+
+      .legend {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+        gap: 20px;
+      }
+
+      .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .legend-color {
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+      }
+
+      .available {
+        background-color: green;
+      }
+      .occupied {
+        background-color: red;
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <div class="topnav" id="myTopnav">
+      <img src="images/logo.png" alt="Logo" />
+      <a href="newhome.html"><i class="fas fa-home"></i> Home</a>
+      <a href="aboutus.html"><i class="fas fa-info-circle"></i> About Us</a>
+      <a href="#"><i class="fas fa-route"></i> Routes & Schedules</a>
+      <a href="#" class="active"
+        ><i class="fas fa-chair"></i> Seat Availability</a
+      >
+      <a href="prob.html" class="split"
+        ><i class="fas fa-phone-alt"></i> Contact Us</a
+      >
+      <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <h1>Afternoon Bus Seat Availability</h1>
+
+    <div class="legend">
+      <div class="legend-item">
+        <div class="legend-color available"></div>
+        <span>Available</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color occupied"></div>
+        <span>Occupied</span>
+      </div>
+    </div>
+
+    <div class="image-container">
+      <img src="images/bus.jpg" alt="Bus Image" />
+      <!-- All seat images with their respective IDs and classes -->
+      <img
+        id="11"
+        src="images/CHAIRB.jpg"
+        class="custom-image11"
+        alt="Seat 11"
+      />
+      <img
+        id="12"
+        src="images/CHAIRB.jpg"
+        class="custom-image12"
+        alt="Seat 12"
+      />
+      <img
+        id="13"
+        src="images/CHAIRB.jpg"
+        class="custom-image13"
+        alt="Seat 13"
+      />
+      <img
+        id="14"
+        src="images/CHAIRB.jpg"
+        class="custom-image14"
+        alt="Seat 14"
+      />
+
+      <img
+        id="21"
+        src="images/CHAIRB.jpg"
+        class="custom-image21"
+        alt="Seat 21"
+      />
+      <img
+        id="22"
+        src="images/CHAIRB.jpg"
+        class="custom-image22"
+        alt="Seat 22"
+      />
+      <img
+        id="23"
+        src="images/CHAIRB.jpg"
+        class="custom-image23"
+        alt="Seat 23"
+      />
+      <img
+        id="24"
+        src="images/CHAIRB.jpg"
+        class="custom-image24"
+        alt="Seat 24"
+      />
+
+      <img
+        id="31"
+        src="images/CHAIRB.jpg"
+        class="custom-image31"
+        alt="Seat 31"
+      />
+      <img
+        id="32"
+        src="images/CHAIRB.jpg"
+        class="custom-image32"
+        alt="Seat 32"
+      />
+      <img
+        id="33"
+        src="images/CHAIRB.jpg"
+        class="custom-image33"
+        alt="Seat 33"
+      />
+      <img
+        id="34"
+        src="images/CHAIRB.jpg"
+        class="custom-image34"
+        alt="Seat 34"
+      />
+
+      <img
+        id="41"
+        src="images/CHAIRB.jpg"
+        class="custom-image41"
+        alt="Seat 41"
+      />
+      <img
+        id="42"
+        src="images/CHAIRB.jpg"
+        class="custom-image42"
+        alt="Seat 42"
+      />
+      <img
+        id="43"
+        src="images/CHAIRB.jpg"
+        class="custom-image43"
+        alt="Seat 43"
+      />
+      <img
+        id="44"
+        src="images/CHAIRB.jpg"
+        class="custom-image44"
+        alt="Seat 44"
+      />
+
+      <img
+        id="51"
+        src="images/CHAIRB.jpg"
+        class="custom-image51"
+        alt="Seat 51"
+      />
+      <img
+        id="52"
+        src="images/CHAIRB.jpg"
+        class="custom-image52"
+        alt="Seat 52"
+      />
+      <img
+        id="53"
+        src="images/CHAIRB.jpg"
+        class="custom-image53"
+        alt="Seat 53"
+      />
+      <img
+        id="54"
+        src="images/CHAIRB.jpg"
+        class="custom-image54"
+        alt="Seat 54"
+      />
+
+      <img
+        id="61"
+        src="images/CHAIRB.jpg"
+        class="custom-image61"
+        alt="Seat 61"
+      />
+      <img
+        id="62"
+        src="images/CHAIRB.jpg"
+        class="custom-image62"
+        alt="Seat 62"
+      />
+      <img
+        id="63"
+        src="images/CHAIRB.jpg"
+        class="custom-image63"
+        alt="Seat 63"
+      />
+      <img
+        id="64"
+        src="images/CHAIRB.jpg"
+        class="custom-image64"
+        alt="Seat 64"
+      />
+
+      <img
+        id="71"
+        src="images/CHAIRB.jpg"
+        class="custom-image71"
+        alt="Seat 71"
+      />
+      <img
+        id="72"
+        src="images/CHAIRB.jpg"
+        class="custom-image72"
+        alt="Seat 72"
+      />
+      <img
+        id="73"
+        src="images/CHAIRB.jpg"
+        class="custom-image73"
+        alt="Seat 73"
+      />
+      <img
+        id="74"
+        src="images/CHAIRB.jpg"
+        class="custom-image74"
+        alt="Seat 74"
+      />
+
+      <img
+        id="81"
+        src="images/CHAIRB.jpg"
+        class="custom-image81"
+        alt="Seat 81"
+      />
+      <img
+        id="82"
+        src="images/CHAIRB.jpg"
+        class="custom-image82"
+        alt="Seat 82"
+      />
+      <img
+        id="83"
+        src="images/CHAIRB.jpg"
+        class="custom-image83"
+        alt="Seat 83"
+      />
+      <img
+        id="84"
+        src="images/CHAIRB.jpg"
+        class="custom-image84"
+        alt="Seat 84"
+      />
+
+      <img
+        id="91"
+        src="images/CHAIRB.jpg"
+        class="custom-image91"
+        alt="Seat 91"
+      />
+      <img
+        id="92"
+        src="images/CHAIRB.jpg"
+        class="custom-image92"
+        alt="Seat 92"
+      />
+
+      <img
+        id="101"
+        src="images/CHAIRB.jpg"
+        class="custom-image101"
+        alt="Seat 101"
+      />
+      <img
+        id="102"
+        src="images/CHAIRB.jpg"
+        class="custom-image102"
+        alt="Seat 102"
+      />
+      <img
+        id="103"
+        src="images/CHAIRB.jpg"
+        class="custom-image103"
+        alt="Seat 103"
+      />
+      <img
+        id="104"
+        src="images/CHAIRB.jpg"
+        class="custom-image104"
+        alt="Seat 104"
+      />
+      <img
+        id="105"
+        src="images/CHAIRB.jpg"
+        class="custom-image105"
+        alt="Seat 105"
+      />
+    </div>
+
+    <h2>Afternoon Bus</h2>
+    <pre id="output"></pre>
+
+    <script>
+      // JavaScript remains exactly the same
+      main();
+
+      async function getData() {
+        try {
+          const res = await fetch("seat_positions.json");
+          const data = await res.json();
+          return data;
+        } catch (error) {
+          console.error("Error fetching data:", error);
+          return { error: "Failed to load seat positions." };
+        }
+      }
+
+      async function main() {
+        const seat = await getData();
+        console.log(seat);
+
+        // All your seat status checking code remains exactly the same
+        if (seat.oneone == 0) {
+          document.getElementById("11").src = "images/CHAIRR.JPG";
+        } else {
+          document.getElementById("11").src = "images/CHAIRG.JPG";
+        }
+
+        if (seat.onetwo == 0) {
+          document.getElementById("12").src = "images/CHAIRR.JPG";
+        } else {
+          document.getElementById("12").src = "images/CHAIRG.JPG";
+        }
+
+        // ... (all the other seat condition checks remain exactly the same)
+
+        if (seat.tenfive == 0) {
+          document.getElementById("105").src = "images/CHAIRR.JPG";
+        } else {
+          document.getElementById("105").src = "images/CHAIRG.JPG";
+        }
+
+        // Display JSON data on the webpage
+        document.getElementById("output").textContent = JSON.stringify(
+          seat,
+          null,
+          2
+        );
+      }
+
+      function toggleNav() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+
+    <script>
+      async function fetchSeatData() {
+        try {
+          const response = await fetch(
+            "http://localhost:5000/get-seat-positions"
+          );
+          const seatData = await response.json();
+
+          console.log("Fetched seat data:", seatData); // Debugging
+
+          seatData.forEach((seat) => {
+            let seatElement = document.getElementById(seat.seat_number);
+            if (seatElement) {
+              seatElement.src = seat.status
+                ? "images/CHAIRR.JPG"
+                : "images/CHAIRG.JPG";
+            }
+          });
+        } catch (error) {
+          console.error("Error fetching seat data:", error);
+        }
+      }
+
+      // Fetch seat data on page load
+      document.addEventListener("DOMContentLoaded", fetchSeatData);
+    </script>
+  </body>
+</html>

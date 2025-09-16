@@ -1,92 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Page-specific styles -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-        body { font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
-        h1 {
-            text-align: center;
-        }
-        p {
-            line-height: 1.6;
-        }
-        .topnav {
-            overflow: hidden;
-            background-color: #333;
-            font-family: 'Karla', sans-serif;
-            display: flex;
-            align-items: center;
-            padding: 10px;
-        }
-        .topnav img {
-            height: 70px;
-            width: 100px;
-            margin-right: 15px;
-        }
-        .topnav a {
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-        }
-        .topnav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        .topnav a.split {
-            margin-left: auto;
-            background-color: #04AA6D;
-            color: white;
-        }
-    </style>
-</head>
-<body>
-    <div class="topnav">
-        <img src="images/logo.png" alt="Logo">
-        <a href="index.html">Home</a>
-        <a href="aboutus.html">About Us</a>
-        <a href="prob.html" class="split">Contact Us</a>
-    </div>
-    <div class="container">
-        <h1>About Us</h1>
-        <p><strong>Greetings in St. La Salle!</strong> We are Computer Engineering students from De La Salle University working on an innovative research project. Our study focuses on developing a <strong>Vision-Based Seat Occupancy Detection and Visualization System</strong> for <strong>point-to-point (P2P) buses</strong> in the Philippines.</p>
-        
-        <h2>Why This Project Matters</h2>
-        <p>Public transportation plays a huge role in daily life, but passengers often face challenges like overcrowding and inefficient scheduling. Unlike other buses, P2P buses don’t have seat reservations, making it hard to predict available seating. Our system aims to solve this by providing <strong>near real-time seat occupancy updates</strong> to help both passengers and bus operators.</p>
-        
-        <h2>What Our System Can Do</h2>
-        <ul>
-            <li><strong>For Commuters:</strong> Before getting on a bus, passengers can check real-time seat availability, allowing them to plan a more comfortable and hassle-free commute.</li>
-            <li><strong>For Bus Companies:</strong> Operators can use this data to optimize bus schedules, improve fleet management, and reduce congestion in high-traffic areas.</li>
-            <li><strong>For Computer Engineers:</strong> Our research provides a foundation for exploring new technologies, including <strong>computer vision, machine learning, and artificial intelligence</strong>, while addressing real-world transportation challenges.</li>
-            <li><strong>For Government Agencies:</strong> Data from our system can help agencies like MMDA and DPWH in <strong>policy-making, traffic planning, and enforcing safety regulations</strong> to ensure smoother and more efficient public transport.</li>
-        </ul>
-        
-        <h2>Our Goal</h2>
-        <p>By introducing this system, we hope to enhance passenger experience, improve bus operations, and support data-driven decision-making in transportation. With real-time seat tracking, we believe we can make commuting <strong>more convenient, efficient, and future-ready</strong>.</p>
-    
-        <h2>Feel Free to Reach Out to Any Member of the Group!</h2>
-        <p>Jalen Andre R. Barcelona - jalen_barcelona@dlsu.edu.ph - 0969 632 0411</p>
-        <p>Anton Luis Z. Boquer - anton_boquer@dlsu.edu.ph - 0966 654 6376</p>
-        <p>Arthur Michael N. Hain IV - arthur_hain@dlsu.edu.ph - 0917 158 4246</p>
-        <p>Roberto Jaime M. Salvador - roberto_jaime_salvador@dlsu.edu.ph - 0923 416 9877</p>
+      .container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
 
+      h1 {
+        text-align: center;
+      }
+
+      p {
+        line-height: 1.6;
+      }
+
+      h2 {
+        margin-top: 25px;
+        color: var(--headerColor);
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 10px;
+        line-height: 1.6;
+      }
+
+      strong {
+        color: var(--primary);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <div class="topnav" id="myTopnav">
+      <img src="images/logo.png" alt="Logo" />
+      <a href="newhome.html"><i class="fas fa-home"></i> Home</a>
+      <a href="aboutus.html" class="active"
+        ><i class="fas fa-info-circle"></i> About Us</a
+      >
+      <a href="#"><i class="fas fa-route"></i> Routes & Schedules</a>
+      <a href="#"><i class="fas fa-chair"></i> Seat Availability</a>
+      <a href="prob.html" class="split"
+        ><i class="fas fa-phone-alt"></i> Contact Us</a
+      >
+      <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
-</body>
+
+    <div class="container">
+      <h1>About Us</h1>
+      <p>
+        <strong>Greetings in St. La Salle!</strong> We are Computer Engineering
+        students from De La Salle University working on an innovative research
+        project. Our study focuses on developing a
+        <strong
+          >Vision-Based Seat Occupancy Detection and Visualization
+          System</strong
+        >
+        for <strong>point-to-point (P2P) buses</strong> in the Philippines.
+      </p>
+
+      <h2>Why This Project Matters</h2>
+      <p>
+        Public transportation plays a huge role in daily life, but passengers
+        often face challenges like overcrowding and inefficient scheduling.
+        Unlike other buses, P2P buses don't have seat reservations, making it
+        hard to predict available seating. Our system aims to solve this by
+        providing <strong>near real-time seat occupancy updates</strong> to help
+        both passengers and bus operators.
+      </p>
+
+      <h2>What Our System Can Do</h2>
+      <ul>
+        <li>
+          <strong>For Commuters:</strong> Before getting on a bus, passengers
+          can check real-time seat availability, allowing them to plan a more
+          comfortable and hassle-free commute.
+        </li>
+        <li>
+          <strong>For Bus Companies:</strong> Operators can use this data to
+          optimize bus schedules, improve fleet management, and reduce
+          congestion in high-traffic areas.
+        </li>
+        <li>
+          <strong>For Computer Engineers:</strong> Our research provides a
+          foundation for exploring new technologies, including
+          <strong
+            >computer vision, machine learning, and artificial
+            intelligence</strong
+          >, while addressing real-world transportation challenges.
+        </li>
+        <li>
+          <strong>For Government Agencies:</strong> Data from our system can
+          help agencies like MMDA and DPWH in
+          <strong
+            >policy-making, traffic planning, and enforcing safety
+            regulations</strong
+          >
+          to ensure smoother and more efficient public transport.
+        </li>
+      </ul>
+
+      <h2>Our Goal</h2>
+      <p>
+        By introducing this system, we hope to enhance passenger experience,
+        improve bus operations, and support data-driven decision-making in
+        transportation. With real-time seat tracking, we believe we can make
+        commuting <strong>more convenient, efficient, and future-ready</strong>.
+      </p>
+
+      <h2>Feel Free to Reach Out to Any Member of the Group!</h2>
+      <p>
+        Jalen Andre R. Barcelona - jalen_barcelona@dlsu.edu.ph - 0969 632 0411
+      </p>
+      <p>Anton Luis Z. Boquer - anton_boquer@dlsu.edu.ph - 0966 654 6376</p>
+      <p>Arthur Michael N. Hain IV - arthur_hain@dlsu.edu.ph - 0917 158 4246</p>
+      <p>
+        Roberto Jaime M. Salvador - roberto_jaime_salvador@dlsu.edu.ph - 0923
+        416 9877
+      </p>
+    </div>
+
+    <script>
+      function toggleNav() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+  </body>
 </html>

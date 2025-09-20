@@ -1,0 +1,286 @@
+{
+  "row_1": {
+    "column_one": {
+      "class_id": 0,
+      "coordinates": {
+        "x": 752.895,
+        "y": 1994.34
+      }
+    },
+    "column_two": {
+      "class_id": 1,
+      "coordinates": {
+        "x": 1309.0300000000002,
+        "y": 1995.4650000000001
+      }
+    },
+    "column_three": {
+      "class_id": 0,
+      "coordinates": {
+        "x": 2423.525,
+        "y": 2011.0349999999999
+      }
+    },
+    "column_four": {
+      "class_id": 1,
+      "coordinates": {
+        "x": 2947.77,
+        "y": 2014.835
+      }
+    }
+  },
+  "row_2": {
+    "column_one": {
+      "class_id": 0,
+      "coordinates": {
+        "x": 1152.55,
+        "y": 1422.145
+      }
+    },
+    "column_two": {
+      "class_id": 0,
+      "coordinates": {
+        "x": 1524.0900000000001,
+        "y": 1427.87
+      }
+    },
+    "column_three": {
+      "class_id": 0,
+      "coordinates": {
+        "x": 2286.51,
+        "y": 1468.6100000000001
+      }
+    },
+    "column_four": {
+      "class_id": 0,
+      "coordinates": {
+        "x": 2664.495,
+        "y": 1477.835
+      }
+    }
+  },
+  "row_3": {
+    "column_one": {
+      "class_id": 0,
+      "coordinates": {
+        "x": 1369.825,
+        "y": 1266.59
+      }
+    },
+    "column_two": {
+      "class_id": 0,
+      "coordinates": {
+        "x": 1643.805,
+        "y": 1273.725
+      }
+    },
+    "column_three": {
+      "class_id": 0,
+      "coordinates": {
+        "x": 2219.8599999999997,
+        "y": 1299.93
+      }
+    },
+    "column_four": {
+      "class_id": 1,
+      "coordinates": {
+        "x": 2494.605,
+        "y": 1301.6950000000002
+      }
+    }
+  },
+  "row_4": {
+    "column_one": {
+      "class_id": 0,
+      "coordinates": {
+        "x": 1490.8200000000002,
+        "y": 1182.0149999999999
+      }
+    },
+    "column_two": {
+      "class_id": 0,
+      "coordinates": {
+        "x": 1715.57,
+        "y": 1184.38
+      }
+    },
+    "column_three": {
+      "class_id": 1,
+      "coordinates": {
+        "x": 2141.505,
+        "y": 1206.915
+      }
+    },
+    "column_four": {
+      "class_id": 0,
+      "coordinates": {
+        "x": 2413.39,
+        "y": 1206.905
+      }
+    }
+  },
+  "row_5": {
+    "column_one": {
+      "class_id": 0,
+      "coordinates": {
+        "x": 1579.575,
+        "y": 1122.905
+      }
+    },
+    "column_two": {
+      "class_id": 1,
+      "coordinates": {
+        "x": 1767.0149999999999,
+        "y": 1131.365
+      }
+    },
+    "column_three": {
+      "class_id": 1,
+      "coordinates": {
+        "x": 2339.645,
+        "y": 1145.54
+      }
+    },
+    "column_four": {
+      "class_id": 0,
+      "coordinates": {
+        "x": 2408.73,
+        "y": 1206.77
+      }
+    }
+  },
+  "row_6": {
+    "column_one": {
+      "class_id": 0,
+      "coordinates": {
+        "x": 1643.3249999999998,
+        "y": 1079.545
+      }
+    },
+    "column_two": {
+      "class_id": 1,
+      "coordinates": {
+        "x": 1826.615,
+        "y": 1060.115
+      }
+    },
+    "column_three": {
+      "class_id": 0,
+      "coordinates": {
+        "x": 2160.74,
+        "y": 1143.945
+      }
+    },
+    "column_four": {
+      "class_id": 1,
+      "coordinates": {
+        "x": 2301.395,
+        "y": 1106.275
+      }
+    }
+  },
+  "row_7": {
+    "column_one": {
+      "class_id": 0,
+      "coordinates": {
+        "x": 1676.295,
+        "y": 1056.135
+      }
+    },
+    "column_two": {
+      "class_id": 0,
+      "coordinates": {
+        "x": 1710.705,
+        "y": 1038.755
+      }
+    },
+    "column_three": {
+      "class_id": 1,
+      "coordinates": {
+        "x": 2134.5649999999996,
+        "y": 1067.6
+      }
+    },
+    "column_four": {
+      "class_id": 0,
+      "coordinates": {
+        "x": 2266.375,
+        "y": 1074.07
+      }
+    }
+  },
+  "row_8": {
+    "column_one": {
+      "class_id": 1,
+      "coordinates": {
+        "x": 1843.75,
+        "y": 1036.11
+      }
+    },
+    "column_two": {
+      "class_id": 1,
+      "coordinates": {
+        "x": 1861.2150000000001,
+        "y": 1016.295
+      }
+    },
+    "column_three": {
+      "class_id": 1,
+      "coordinates": {
+        "x": 2122.89,
+        "y": 1041.94
+      }
+    },
+    "column_four": {
+      "class_id": 0,
+      "coordinates": {
+        "x": 2246.105,
+        "y": 1049.5700000000002
+      }
+    }
+  },
+  "row_9": {
+    "column_one": {
+      "class_id": 0,
+      "coordinates": {
+        "x": 1741.155,
+        "y": 1015.52
+      }
+    },
+    "column_two": {
+      "class_id": 1,
+      "coordinates": {
+        "x": 1797.8200000000002,
+        "y": 950.7650000000001
+      }
+    },
+    "column_three": {
+      "class_id": 1,
+      "coordinates": {
+        "x": 1958.12,
+        "y": 998.635
+      }
+    },
+    "column_four": {
+      "class_id": 1,
+      "coordinates": {
+        "x": 2027.58,
+        "y": 998.365
+      }
+    },
+    "column_five": {
+      "class_id": 1,
+      "coordinates": {
+        "x": 2107.58,
+        "y": 1019.0350000000001
+      }
+    },
+    "column_six": {
+      "class_id": 1,
+      "coordinates": {
+        "x": 2201.935,
+        "y": 1016.735
+      }
+    }
+  }
+}

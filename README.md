@@ -112,17 +112,9 @@ Driver Area | Row 1 | Row 2 | ... | Row 8 | Row 9 (6-seat)
 - [ ] **Test new cases of seating** based on the output of an improved detection model
 
 ### Technical Improvements
-- [ ] Add seat selection/booking functionality
-- [ ] Implement real-time WebSocket updates
-- [ ] Add mobile-responsive design optimizations
-- [ ] Create admin panel for seat status management
-- [ ] Add accessibility features (WCAG compliance)
 
 ### Data & Analytics
-- [ ] Implement occupancy analytics dashboard
-- [ ] Add historical data tracking
-- [ ] Create capacity prediction algorithms
-- [ ] Add route-specific seat patterns analysis
+
 
 ## 🏗️ Architecture
 

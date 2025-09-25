@@ -405,10 +405,15 @@ if aisle_pair and cross_aisle_pair_groups:
         'total_chairs': 6  # 2 + 2 + 2 = 6 chairs
     }
     
+    # IMPORTANT: Remove the top_group from cross_aisle_pair_groups to avoid duplicate drawing
+    cross_aisle_pair_groups.remove(top_group)
+    
     print(f"Last row group created with 6 chairs:")
     print(f"  Top left pair: 2 chairs")
     print(f"  Cross-aisle pair: 2 chairs")
     print(f"  Top right pair: 2 chairs")
+    print(f"  Removed last row pair from regular cross-aisle groups to avoid duplicates")
+    print(f"  Remaining cross-aisle pair groups: {len(cross_aisle_pair_groups)}")
 else:
     last_row_group = None
 
